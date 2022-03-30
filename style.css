@@ -10,39 +10,118 @@ a{
     color: #4285F4;
 }
 
-h3, p, .numbers-ol{
-    margin-bottom: 20px;
+/* ----------------------------- */
+
+.header-container{
+    /* height: 100px; */
+    border-bottom: 1px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
 }
 
-h3{
-    font-weight: 400;
-    font-size: 1.5rem;
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-p, li{
-    font-weight: 300;
-    font-size: 0.95rem;
-    line-height: 1.75rem;
+.logo-col{
+    display: flex;
+    gap: 5px;
 }
 
-ol{
-    padding-left: 18px;
+.logo{
+    width: 75px;
 }
 
-li{
-    padding-left: 10px;
-    margin-bottom: 10px;
+.privacy{
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.fa-list-ul{
+    margin-right: 25px;
+}
+
+.fa-user{
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 11px;
+    border-radius: 50%;
+}
+
+.navbar{
+    display: flex;
+    gap: 30px;
+    /* font-size: 0.9rem; */
+}
+
+.navbar li{
+    list-style: none;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.navbar li:last-child{
+    color: #4285F4;
+    position: relative;
+}
+
+.navbar li:last-child::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #4285F4;
+}
+
+/* ----------------------------- */
+
+.main-container{
+    width: 68%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.faq-wrapper{
+    margin-bottom: 70px;
 }
 
 .letters-ol{
     margin: 10px 0;
 }
 
-.main-container{
-    width: 68%;
-    margin: 0 auto;
+.question, p, .numbers-ol{
+    margin-bottom: 20px;
 }
 
-.faq-wrapper{
-    margin-bottom: 70px;
+.question{
+    font-weight: 400;
+    font-size: 1.5rem;
 }
+
+p, .main-container li{
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.75rem;
+}
+
+.main-container ol{
+    padding-left: 18px;
+}
+
+.main-container li{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
