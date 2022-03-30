@@ -1,11 +1,11 @@
 <?php
 
 $options = [
-    '<li>Introduzione</li>',
-    '<li>Norme sulla privacy</li>',
-    '<li>Termini di servizio</li>',
-    '<li>Tecnologie</li>',
-    '<li>Domande frequenti</li>'
+    '<li class="option">Introduzione</li>',
+    '<li class="option">Norme sulla privacy</li>',
+    '<li class="option">Termini di servizio</li>',
+    '<li class="option">Tecnologie</li>',
+    '<li class="option">Domande frequenti</li>'
 ];
 
 $faq = [
@@ -55,7 +55,7 @@ $faq = [
         'answer' => '
         <p>Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell\'ultimo anno.</p>
         <p>I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l\'associazione del paese.</p>
-        <p>Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. <a href="">Contattaci</a> se ritieni che il paese associato al tuo account sia sbagliato.</p>'
+        <p>Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. <a  href="">Contattaci</a> se ritieni che il paese associato al tuo account sia sbagliato.</p>'
     ],
     [
         'question' => '<h3 class="question">Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?</h3>',
@@ -63,10 +63,17 @@ $faq = [
     ],
     
     [
-        'question' => '<h3 class="questio2">Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?</h3>',
+        'question' => '<h3 class="question">Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?</h3>',
         'answer' => '<p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href="">URL referrer</a>. Talvolta, l\'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\' esatte parole chiave che hanno determinato il clic su un annuncio.</p>'
     ]  
 ];
+
+$info_link = [
+    '<li class="link"><a href="">Google</a></li>',
+    '<li class="link"><a href="">Tutto su Google</a></li>',
+    '<li class="link"><a href="">Privacy</a></li>',
+    '<li class="link"><a href="">Termini</a></li>',
+]
 
 ?>
 
@@ -126,5 +133,26 @@ $faq = [
             ?>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="about-google">
+                <?php
+                    foreach($info_link as $key => $link){
+                        echo $link;
+                    };                    
+                ?>
+            </ul>
+            <div class="language-col">
+                <i class="fa-solid fa-globe"></i>
+                <select name="" id="">
+                    <option value="">Italiano</option>
+                    <option value="">English</option>
+                    <option value="">Deutsch</option>
+                    <option value="">Español</option>
+                </select>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
